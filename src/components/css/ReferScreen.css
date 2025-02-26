@@ -1,0 +1,146 @@
+/* container-wrapper */
+
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* margin: 0 160px ; */
+    /* margin-left : 160px; */
+    margin-right: 160px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EEF5FF;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.text-container {
+    max-width: 400px;
+    text-align: left;
+    margin-left: 30px;
+    /* Ensures text starts from the left */
+}
+
+.left-section .text-container h1 {
+    font-size: 64px;
+    /* Increase font size */
+    font-weight: bold;
+    /* Keep h1 bold */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.text-container h2 {
+    font-size: 36px;
+    /* Increase font size */
+    font-weight: normal;
+    /* Make h2 non-bold */
+    margin: 8px 0 0;
+    /* Adjust spacing */
+    color: #333;
+    /* Optional: Slightly softer color */
+}
+
+.text-container h2 .highlighted-amount {
+    font-size: 40px; /* Slightly larger */
+    font-weight: bold;
+    color: #007bff; /* Blue color */
+}
+
+.refer-button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+
+}
+
+.anniversary-image {
+    max-width: 814px;
+    height: 725px;
+    /* object-fit: contain; */
+    object-fit: cover;
+    /* Ensures the image fills the container */
+    transform: scale(1.5);
+    /* Zooms in by 20% */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Layout: Hide Image & Center Content on Small Screens */
+@media (max-width: 1140px) {
+    .content-wrapper {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center horizontally */
+        justify-content: center;
+        text-align: center; /* Center text */
+        margin: 0; /* Remove margin */
+    }
+
+    .text-container {
+        text-align: center;
+        margin: 0;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .left-section .text-container h1 {
+        font-size: 30px;
+        /* Increase font size */
+        font-weight: bold;
+        /* Keep h1 bold */
+        margin: 0;
+        /* Remove default margin */
+    }
+    
+    .text-container h2 {
+        font-size: 16px;
+        /* Increase font size */
+        font-weight: normal;
+        /* Make h2 non-bold */
+        margin: 8px 0 0;
+        /* Adjust spacing */
+        color: #333;
+        /* Optional: Slightly softer color */
+    }
+    
+    .text-container h2 .highlighted-amount {
+        font-size: 22px; /* Slightly larger */
+        font-weight: bold;
+        color: #007bff; /* Blue color */
+    }
+    
+    .left-section {
+        align-items: center;
+    }
+
+    .text-container h2 .highlighted-amount {
+        display: block; /* Ensure it moves to a new line */
+    }
+
+    .refer-button {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .right-section {
+        display: none; /* Hide the image */
+    }
+}

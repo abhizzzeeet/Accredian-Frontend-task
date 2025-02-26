@@ -1,10 +1,11 @@
 /* General container */
 .refer-container {
+  padding-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: #f3f4f6;
+    background-color: white;
   }
   
   .refer-content {
@@ -89,3 +90,5 @@
     font-size: 0.8rem;
     margin-top: 3px;
   }
+
+

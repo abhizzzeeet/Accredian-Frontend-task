@@ -4,14 +4,33 @@ const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 class ReferralController {
 
-  async validateForm (formData)  {
+  async validateForm(formData) {
     let errors = {};
-    if (!formData.referrerName) errors.referrerName = "Referrer name is required";
-    if (!formData.referrerEmail) errors.referrerEmail = "Referrer email is required";
-    if (!formData.refereeName) errors.refereeName = "Referee name is required";
-    if (!formData.refereeEmail) errors.refereeEmail = "Referee email is required";
+
+    console.log("formData received:", formData);
+
+    if (!formData.referrerName || !formData.referrerName.trim()) {
+        errors.referrerName = "Your Name is required.";
+    }
+    if (!formData.referrerEmail || !formData.referrerEmail.trim()) {
+        errors.referrerEmail = "Your Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.referrerEmail)) {
+        errors.referrerEmail = "Enter a valid email.";
+    }
+    if (!formData.refereeName || !formData.refereeName.trim()) {
+        errors.refereeName = "Friend's Name is required.";
+    }
+    if (!formData.refereeEmail || !formData.refereeEmail.trim()) {
+        errors.refereeEmail = "Friend's Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.refereeEmail)) {
+        errors.refereeEmail = "Enter a valid email.";
+    }
+    if (!formData.courseName || !formData.courseName.trim()) {
+        errors.courseName = "Course Name is required.";
+    }
+
     return errors;
-  };
+}
   
   async submitData(formData) {
     try {

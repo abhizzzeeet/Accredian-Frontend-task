@@ -1,0 +1,29 @@
+/* Tabs Container */
+.tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  /* Tab Buttons */
+  .tab-button {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .tab-button.active {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+  }
+  
+  /* Content Area */
+  .tab-content {
+    padding: 20px;
+    text-align: center;
+  }
+  

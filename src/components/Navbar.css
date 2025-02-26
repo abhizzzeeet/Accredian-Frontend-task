@@ -1,10 +1,14 @@
 /* Navbar Container */
 .navbar {
+    position: fixed; /* Fixes navbar at the top */
+    top: 0;
+
+    z-index: 1000; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 9.6px 280px;
+    padding: 9.6px 160px;
     background-color: #f8f9fa;
 }
 
@@ -12,14 +16,14 @@
 .navbar-left {
     display: flex;
     align-items: center;
-    margin-left: 280px;
+    margin-left: 160px;
 }
 
 /* Right Section (Links) */
 .navbar-right {
     display: flex;
     align-items: center;
-    margin-right: 280px;
+    margin-right: 160px;
 }
 
 /* Navigation Links */
@@ -90,7 +94,7 @@
 
     .navbar-left {
         margin-left: 0;
-        padding-left: 10px;
+        padding-left: 20px;
     }
 
     .navbar-right {
@@ -99,7 +103,7 @@
 
     .mobile-menu {
         display: flex;
-        padding-right: 10px;
+        padding-right: 20px;
     }
 
     /* Show Dropdown Menu when active */

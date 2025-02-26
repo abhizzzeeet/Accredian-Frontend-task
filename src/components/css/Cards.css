@@ -1,0 +1,70 @@
+.cards {
+    /* width: 100vw; */
+    text-align: center;
+    margin: 60px 0;
+    padding : 40px;
+    background-color: #EEf5FF;
+}
+
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Cards Container */
+.cards .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Space between cards */
+    margin-bottom: 60px;
+}
+
+/* Individual Card */
+.card {
+    display: flex;
+    flex-direction: column; /* Align icon and text vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between icon and text */
+    padding: 30px;
+    border-radius: 50%; /* Circular card */
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    height: 220px;
+    text-align: center;
+}
+
+/* Icon */
+.card-icon {
+    font-size: 80px !important;
+    color: #007bff;
+}
+
+/* Text inside Card */
+.card p {
+    font-size: 16px;
+    color: #333;
+    max-width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 220px; /* Keep a fixed width */
+        height: 220px; /* Keep a fixed height */
+        border-radius: 50%; /* Ensures circular shape */
+        padding: 20px;
+    }
+
+    .card p {
+        max-width: 100%;
+    }
+}
